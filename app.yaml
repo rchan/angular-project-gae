@@ -1,0 +1,16 @@
+application: angular-project-gae
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /(robots\.txt|favicon\.ico|sitemap\.txt|index\.html)
+  static_files: static/\1
+  upload: static/(.*)
+
+- url: /project
+  static_dir: project
+
+- url: /.*
+  script: server.app
