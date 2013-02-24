@@ -1,11 +1,11 @@
 angular-project-gae
 ===================
 
-The "Wire up a Backend" example from Angularjs home page made to work with GAE datastore via REST interface
+The "Wire up a Backend" example from Angularjs home page made to work with Google App Engine (GAE) datastore via REST interface
 
 http://angularjs.org/#project-html
 
-Modified to work with GAE datastore instead of Mongolab.
+Modified to work with GAE datastore via ndb instead of Mongolab.
 
 angular.js and bootstrap.css from CDNs.
 
