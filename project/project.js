@@ -16,7 +16,7 @@ function ListCtrl($scope, Project) {
 function CreateCtrl($scope, $location, Project) {
   $scope.save = function() {
     Project.save($scope.project, function(project) {
-      $location.path('/edit/' + project.id);
+      $location.path('/');
     });
   }
 }
