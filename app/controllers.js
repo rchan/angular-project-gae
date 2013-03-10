@@ -1,4 +1,4 @@
-angular.module('controllers',[])
+angular.module('controllers',['datastore'])
   .controller('AboutCtrl', ['$scope', function($scope){
     $scope.title = 'About Page';
     $scope.body = 'This is the about page body';
@@ -13,13 +13,17 @@ angular.module('controllers',[])
   }])
   .controller('PhoneListCtrl', ['$scope', function($scope){
     $scope.title = 'PhoneList Page';
-      $scope.phones = [
+    $scope.phones = [
         {"name": "Nexus S",
          "snippet": "Fast just got faster with Nexus S."},
         {"name": "Motorola XOOM™ with Wi-Fi",
          "snippet": "The Next, Next Generation tablet."},
         {"name": "MOTOROLA XOOM™",
          "snippet": "The Next, Next Generation tablet."}
-      ];
+    ];
+  }])
+  .controller('ProjectListCtrl', ['$scope','Project', function($scope, Project){
+    $scope.title = 'ProjectList Page';
+    $scope.projects = Project.query();
   }])
 ;
